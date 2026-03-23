@@ -21,8 +21,24 @@ function verifierProduit(produit){
 console.log(verifierProduit("S") ? "Pass" : "Fail");
 
 const produit = {nom:"Stylo",prix : 5, Quantite : 10};
-console.log(produit.nom,produit.prix);*/
+console.log(produit.nom,produit.prix);
 
 const prixProduits = [5, 12, 7];
 const produitsChers = prixProduits.filter(p => p > 10);
 console.log(produitsChers);
+
+const produits = ["Stylo","Cahier","Gomme"];
+const testProduit = "Cahier";
+if(produits.includes(testProduit)){
+    console.log(`Test Passed : ${testProduit} trouvé ✅`);
+}else{
+    console.log(`Test Failed : ${testProduit} non trouvé ❌`);
+}*/
+const produits = ["Stylo","Cahier","Gomme"];
+const tests = ["Stylo", "Taille-crayon", "Gomme"];
+
+function verifier(produit){
+    return produits.includes(produit);
+}
+
+tests.forEach(p => console.log(verifier(p) ? "Pass ✅" : "Fail ❌"));
